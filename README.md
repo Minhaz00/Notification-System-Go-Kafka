@@ -7,7 +7,7 @@ In this tutorial, you will learn how to integrate **Apache Kafka** with **Go** t
 
 Apache Kafka is a **distributed event streaming platform** that was initially developed by LinkedIn and later open-sourced through the Apache Software Foundation. It is now a leading tool for processing real-time data streams, used by companies like Uber, Netflix, and LinkedIn for handling large-scale, real-time event streaming.
 
-![](./image-3.png)
+![](https://github.com/Minhaz00/Notification-System-Go-Kafka/blob/main/images/image-3.png?raw=true)
 
 ### Kafka’s Role in Real-Time Systems
 Kafka acts as an **event broker** that enables applications to communicate by producing and consuming messages (events) in real time. In this context, an "event" is simply a record of something happening, such as a user action or system event. Kafka is designed to handle high throughput and low latency, making it ideal for scenarios that require constant updates, such as notifications, logging, or stream processing.
@@ -580,7 +580,7 @@ In another terminal, run the consumer:
 go run cmd/consumer/consumer.go
 ```
 
-![alt text](image.png)
+![alt text](https://github.com/Minhaz00/Notification-System-Go-Kafka/blob/main/images/image.png?raw=true)
 
 ### **Step 3: Send Notifications**
 With both producer and consumer running, you can simulate sending notifications. Open up a third terminal and use the below `curl` commands to send notifications:
@@ -603,7 +603,7 @@ curl -X POST http://localhost:5001/send \
 -d "fromID=4&toID=1&message=Lena liked your post: My weekend getaway!"
 ```
 
-![alt text](image-1.png)
+![alt text](https://github.com/Minhaz00/Notification-System-Go-Kafka/blob/main/images/image-1.png?raw=true)
 
 ### **Step 4: Retrieve Notifications**
 Retrieve notifications for user 2:
@@ -612,7 +612,7 @@ Retrieve notifications for user 2:
 curl http://localhost:5002/notifications/1 | python3 -m json.tool
 ```
 
-![alt text](image-2.png)
+![alt text](https://github.com/Minhaz00/Notification-System-Go-Kafka/blob/main/images/image-2.png?raw=true)
 
 ## **Conclusion**
 You’ve built a basic real-time notification system using **Go**, **Kafka**, and **Gin**. The producer sends notifications via Kafka, and the consumer listens for them, storing them for later retrieval.
